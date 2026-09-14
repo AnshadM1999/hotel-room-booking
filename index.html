@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raintech Hotel | Room Booking</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-mark">RH</span>
+      <div class="brand-text">
+        <h1>Raintech Hotel</h1>
+        <p>Hotel Room Booking</p>
+      </div>
+    </div>
+    <span class="portal-badge">Booking Portal</span>
+  </div>
+</header>
+
+<main>
+  <section class="booking-container">
+
+    <!-- ROOMS -->
+    <section class="rooms-section" aria-labelledby="rooms-heading">
+      <div class="section-head">
+        <h2 id="rooms-heading">Available Rooms</h2>
+        <div class="guest-filter">
+          <label for="guestFilter">Filter by guests</label>
+          <select id="guestFilter">
+            <option value="0">Any</option>
+            <option value="1">1 Guest</option>
+            <option value="2">2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="roomList" class="room-list"></div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="booking-section" aria-labelledby="booking-heading">
+
+      <div class="card">
+        <h2 id="booking-heading">Booking Details</h2>
+
+        <form id="bookingForm" novalidate>
+          <div class="field">
+            <label for="checkInDate">Check-in date</label>
+            <input type="date" id="checkInDate" name="checkInDate" required>
+          </div>
+
+          <div class="field">
+            <label for="checkOutDate">Check-out date</label>
+            <input type="date" id="checkOutDate" name="checkOutDate" required>
+          </div>
+
+          <div class="field">
+            <label for="guestCount">Guests</label>
+            <select id="guestCount" name="guestCount">
+              <option value="1">1</option>
+              <option value="2" selected>2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+        </form>
+
+        <div id="errorBox" class="error-box" role="alert" hidden></div>
+      </div>
+
+      <div class="card summary-card">
+        <h2>Booking Summary</h2>
+        <div id="summaryBody" class="summary-body">
+          <p class="summary-empty-title">No room selected</p>
+          <p class="summary-empty-sub">Select a room and dates to see your booking summary.</p>
+        </div>
+
+        <button id="confirmBtn" class="btn-primary" type="button" disabled>Confirm Booking</button>
+
+        <div id="successBox" class="success-box" role="status" hidden></div>
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Raintech Hotel. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
