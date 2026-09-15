@@ -49,7 +49,7 @@ hotel-room-booking/
 ├── index.html          Page structure and semantic markup
 ├── style.css           All styling (CSS variables, layout, responsive rules)
 ├── script.js           Room data, business logic, and DOM rendering
-├── booking.test.js Unit tests for the pure logic functions
+├── booking.test.js     Unit tests for the pure logic functions
 └── README.md
 ```
 
